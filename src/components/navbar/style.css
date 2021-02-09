@@ -19,7 +19,8 @@
     background-color: white;
     color: white;
     padding: 1rem 0 0 4rem;
-    border: none;}
+    border: none;
+    cursor: pointer;}
 .dropdown-content {
     display: none;
     position: absolute;

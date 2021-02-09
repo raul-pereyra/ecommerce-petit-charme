@@ -1,5 +1,4 @@
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComponent from './components/navbar/';
 import ButtonComponent from './components/button';
 
