@@ -1,5 +1,5 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './style.css'
+import CartWidget from '../../containers/CartWidget';
+import './style.css';
 const NavbarComponent = () =>{
     return(
         <>
@@ -22,9 +22,7 @@ const NavbarComponent = () =>{
             </div>
             <a className='nav__go__home' href="/index.html">Petit Charme</a>
             <div>
-                <button className='nav__carrito'>
-                    <img src="/images/bolso.svg" alt="" height='30vh'/>
-                </button>                
+            <CartWidget/>               
             </div>
         </nav>
         
