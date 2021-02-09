@@ -3,7 +3,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: white;}
+    color: white;
+}
 .nav__primary a{
     text-decoration: none;}
 .nav__go__home{
@@ -26,7 +27,8 @@
     z-index: 1;
     width: 100vw;
     height: 50vh;
-    background-color: rgba(255, 255, 255, 0.767)}
+    background-color: rgba(255, 255, 255, 0.904);
+    z-index: 2;}
 .dropdown:hover .dropdown-content {display: block;}
 .line__menu{
     width: 2vw;
