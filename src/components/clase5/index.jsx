@@ -1,11 +1,17 @@
 const CompQNoHaceNada = () =>{
-    return 
-    <h2>Hola!</h2>
+    return (
+        <>
+        <h2>Hola!</h2>
+        </>
+    )
 }
-const SupperButton = () =>{
-    return  <>
-    <button> funcion pasada como parametro</button>
-    </>
+const SupperButton = ({componenteRandom}) =>{
+    return ( 
+        <>
+        <button> funcion pasada como parametro</button>
+        {componenteRandom()}
+        </>
+    )
     
 }
 
