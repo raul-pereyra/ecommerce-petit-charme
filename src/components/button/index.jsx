@@ -1,5 +1,3 @@
-import './style.css';
-
 const ButtonComponent = ({text}) =>{
     const Agregado = () =>{
         alert('Se agrego el producto al carrito')

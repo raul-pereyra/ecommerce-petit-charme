@@ -1,5 +1,5 @@
 import CartWidget from '../../containers/CartWidget';
-import './style.css';
+
 const NavbarComponent = () =>{
     return(
         <>

@@ -1,7 +1,8 @@
-import './App.css';
+import './App.scss';
 import NavbarComponent from './components/navbar/';
 import ButtonComponent from './components/button';
 import ItemListContainer from './containers/ItemListContainer';
+import ItemList from './components/clase5';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
     {/* <ButtonComponentChildren text={'agregar al carrito'}> ESTE FORMATO SERIA CON UN CHILDREN
       <div>Hola,soy el children del segundo boton</div>
     </ButtonComponentChildren> */}
+    <ItemList/>
     </>
   );
 }
