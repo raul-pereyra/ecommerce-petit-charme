@@ -11,7 +11,6 @@ const App = () => {
     <ItemListContainer greeting={'Bienvenido a Petit Charme, pronto encontrarás más productos.'}/>
     <ItemCount />
     <ButtonComponent text={'agregar al carrito'}/>
-    
     </>
   );
 }
