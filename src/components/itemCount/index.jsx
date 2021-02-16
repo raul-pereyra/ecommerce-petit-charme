@@ -1,27 +1,23 @@
-import { useEffect, useState} from "react";
-const ItemCount = () => {
-    const [count, setCount] = useState(0);
-
-        // useEffect(() => {
-        //     // Consultas a la Base de Datos y suscripciones como AddEventList
-        //     console.log('se monto el componente');
-        //     return()=>{
-        //         // Desuscripciones de eventos o BD
-        //         console.log('se esta por morir');
-        //     }
-        // }, [])/*Este es el filtro, si lo dejamos vacio se aplica cuando se monta. Ver hay varios filtros*/
-        // // Se vuelve a renderizar, validaciones
-        // console.log('se esta por renderizar');
-
+ const ItemCount = ({stock, onAdd, count, onSubtract}) => {     
     return (
         <>
             <div className="cont__prod">
-                <button className='cont__menos btn__cont' onClick={() => setCount(count-1)}>-</button>
+                <button className='cont__menos btn__cont' onClick={()=>{onSubtract(stock)}}>-</button>
                 <p>{count}</p>
-                <button className='cont__mas btn__cont' onClick={() => setCount(count+1)}>+</button>
+                <button className='cont__mas btn__cont' onClick={()=>{onAdd(stock)}}>+</button>
             </div>  
         </>
     )
 }
 
 export default ItemCount
+
+// const nombres = ['futbol', 'basquet', 'tennis','rugby','boxeo','natacion'];
+// return(//CON ESTO IMPRIMIMOS EL PANTALLA ESTE ARRAY CON EL MAP
+//     <>
+//         {nombres.map((element, index)=>{
+//             return (<p key={index}>{element}</p>)
+//         })}
+//     </>
+// )}
+// export default ItemCount;
