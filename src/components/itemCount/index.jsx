@@ -2,7 +2,7 @@
     return (
         <>
             <div className="cont__prod">
-                <button className='cont__menos btn__cont' onClick={()=>{onSubtract(stock)}}>-</button>
+                <button className='cont__menos btn__cont' onClick={onSubtract}>-</button>
                 <p>{count}</p>
                 <button className='cont__mas btn__cont' onClick={()=>{onAdd(stock)}}>+</button>
             </div>  
