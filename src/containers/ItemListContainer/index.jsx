@@ -5,6 +5,7 @@ import listProduct from '../../database/list-product'
 
 const ItemListContainer = (props) =>{
     const [count, setCount] = useState(1);
+    const [loading, setLoading] = useState(false);
 
     const onAdd =(stock)=>{
         if (count < stock){
@@ -23,12 +24,25 @@ const ItemListContainer = (props) =>{
 
     const [products, setProducts] = useState([])
     useEffect(()=>{
+        setLoading(true);
         const myPromise = new Promise((resolve, reject)=>{
             setTimeout(()=>resolve (listProduct),3000)
         });
-        myPromise.then((result)=>setProducts(result));
-    },[])
+        myPromise.then(
+            (result)=>{
+                setProducts(result);
+                setLoading(false);
+            });
+            
+    }, [])
 
+    if(loading){
+        return(
+            <>
+            <h3>Cargando Productos...</h3>
+            </>
+        )
+    }
 
 
     return(
@@ -36,8 +50,8 @@ const ItemListContainer = (props) =>{
         <div className='card__prod'>
             <p>{'aca va el greeting'}</p>
         </div>
-        <ItemCount stock={5} count={count} onAdd={onAdd} onSubtract={onSubtract} />
         <ItemList products={products}/>
+        <ItemCount stock={5} count={count} onAdd={onAdd} onSubtract={onSubtract} />
         </>
     );
     
