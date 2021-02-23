@@ -1,11 +1,8 @@
+import Cart from '../../components/cart'
 const CartWidget = () =>{
     return(
         <>
-        <button className='nav__carrito dropbtn'>
-            <img src="/images/bolso.svg" alt="" height='30vh'/>
-            <div className='list__cart'>
-            </div>
-        </button> 
+        <Cart />
         </>
     )
 }
