@@ -1,11 +1,15 @@
- const ItemCount = ({stock, onAdd, count, onSubtract}) => {     
+
+import ButtonComponent from '../button';
+
+const ItemCount = ({stock, onAdd, count, onSubtract}) => {     
     return (
         <>
             <div className="cont__prod">
                 <button className='cont__menos btn__cont' onClick={onSubtract}>-</button>
                 <p>{count}</p>
                 <button className='cont__mas btn__cont' onClick={()=>{onAdd(stock)}}>+</button>
-            </div>  
+            </div>
+            <ButtonComponent text={'agregar al carrito'}/> 
         </>
     )
 }
